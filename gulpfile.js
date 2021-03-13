@@ -37,7 +37,7 @@ function styles() {
     .pipe(less({
         plugins: [autoprefix] // Подключает планин с аутопрефиксами
     }))
-    .pipe(concat('main.min.css')) // Конкантинипует все фалы в один
+    // .pipe(concat('main.min.css')) // Конкантинипует все фалы в один
     .pipe(cleancss()) // Минимизируем файл
     .pipe(dest('app/css/')) // Перемещает файлы в указанную папку
     .pipe(browserSync.stream())
