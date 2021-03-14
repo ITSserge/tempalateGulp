@@ -38,7 +38,7 @@ function styles() {
         plugins: [autoprefix] // Подключает планин с аутопрефиксами
     }))
     // .pipe(concat('main.min.css')) // Конкантинипует все фалы в один
-    .pipe(cleancss()) // Минимизируем файл
+    // .pipe(cleancss()) // Минимизируем файл
     .pipe(dest('app/css/')) // Перемещает файлы в указанную папку
     .pipe(browserSync.stream())
 
@@ -46,10 +46,8 @@ function styles() {
 
 // * Функция для скриптов
 function scripts () {
-    return src ([
-        'node_modules/jquery/dist/jquery.min.js',
-        'app/js/main.js',
-    ])
+    return src(['app/js/*.js', '!app/js/*.min.js'])
+    
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))

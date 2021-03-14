@@ -4,9 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подкючаем Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Подключение базовых стилей -->
+    <link rel="stylesheet" href="css/main.css">
+
     <title>Gipsolit</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container-md container-fluid">
+            <div class="d-flex flex-row justify-content-lg-between flex-wrap ">
+
+                <!-- Колонка с логотипом -->
+                
+                <div class="d-flex justify-content-center col-lg-2 col-md-4 order-smart-1 mt-sm-3">
+                    <img class="logo" src="img/dist/ГИПСОЛИТ.png" alt="гипсолит">
+                </div>
+                <!-- /.col-lg-2 -->
+                
+                
+                <!--  Колонка с телефоном и кнопкой -->
+                
+                <div class="col-lg-6 col-md-8 d-flex no-p justify-content-md-center justify-content-lg-end order-smart-0 mt-md-3"> 
+                    <div class="fb-header d-flex flex-row align-items-center justify-content-sm-center justify-content-lg-end justify-content-between">
+                        
+                        <a class="fb-header__tel text-nowrap mr-md-5" href="tel:+74957710508">+7 495 771 05 08</a>
+                        
+                        <button class="btn fb-header__btn button"><span class="d-none d-sm-inline-block">получить консультацию</span><span class="d-sm-none">консультация</span></button>
+                        
+                        
+                    </div>
+                    <!-- /.fb-header -->
+                </div>
+                <!-- /.col-lg-4 -->
+
+            </div>
+        </div>
+
+        <!-- ! Header -- основной  -->
+        <div class="container main-header">
+            <div class="row d-flex flex-row justify-content-between align-items-start">
+                <div class="col-xl-6 d-xl-block text-xl-left  col-lg-12 d-lg-flex flex-row justify-content-lg-center text-center">
+
+                    <div class="offer">
+                        <div class="header">
+                            
+                            <div class="title">
+
+                                <h1>Автоматизированная <br> штукатурка стен</h1>
+                                
+                            </div>
+                            <!-- /.title -->
+
+                            <div class="subtitile">
+
+                                <p>Идеально ровные стены <br> в кратчайшие сроки</p>
+
+                            </div>
+                            <!-- /.subtitile -->
+
+                            <div class="main-price d-flex flex-column align-items-xl-start  justify-content-center align-items-center">
+                                <div class="price user-select-none">
+                                    <p>Стоимость работ <br> от <span>300</span> руб/м2</p>
+                                </div>
+                                <div class="price-b">
+                                    <p>
+                                        Оплата по факту!
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.header -->
+                    </div>
+                </div>
+
+
+                <!-- Форма  -->
+
+                <div class="col-xl-4 d-xl-block  col-12 d-flex flex-row justify-content-center">
+
+                    <div class="main-form ">
+                        <!-- Заголовок формы -->
+                        <div class="form-header">
+
+                            <div class="form-header__text">
+                                <p>Для расчёта точной стоимости <br> закажите <span>выезд замерщика</span></p>
+                            </div>
+
+                            <!-- /.form-header__text -->
+                        </div>
+                        <!-- /.form-header -->
+
+
+                        <!-- блок с инпктами -->
+                        <div class="form-input">
+
+                            <div class="form-input_input">
+
+                                <label class="input-label input-label-1" for="in-head-1">Ваше имя</label>
+                                <input class="input" id="in-head-1" type="text">
+
+                            </div>
+                            <!-- /.form-input__input -->
+                            <div class="form-input_input">
+
+                                <label class="input-label input-label-2" for="in-head-2">Номер телефона</label>
+                                <input class="input" id="in-head-2" type="text">
+
+                            </div>
+                            <!-- /.form-input__input -->
+                            <div class="form-input_btn">
+
+                                <buttton class="btn button">Оставьте заявку</buttton>
+                            
+                            </div>
+                            <!-- /.form-input__btn -->
+                            <div class="form-input-small">
+
+                                <small>Приедем в день обращения*</small>
+
+                            </div>
+                            <!-- /.form-input-small -->
+                        </div>
+                        <!-- /.form-input -->
+                                        </div>
+                    </div>
+            </div>
+            <!-- /.row d-flex flex-row -->
+        </div>
+        <!-- /.container -->
+    </header>
 </body>
 </html>

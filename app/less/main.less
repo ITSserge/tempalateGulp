@@ -1,12 +1,63 @@
-// Hello world
+// * Импортирование стилей со шрифтами 
+@import url("fonts.less");
+
+// * Импорт цветов 
+@import url("color.less");
+
+// * Подкючение переменных
+@import url("variables.less");
+
+// * Подкючение переменных
+@import url("header.less");
+
+
+//! На время переташил переменные сюда, для того, чтобы появлялись подсказки 
+
+
+.reg() {
+    font-family: 'proxima_nova_reg', sans-serif;
+}
+
+.bold() {
+    font-family: 'proxima_nova_bold', sans-serif;
+}
+
+
+@button-color: #fcb303;
+@icon-color: #70c849;
+@danger-color: #ff0000;
+@light-color: #fff;
+@text-color: rgb(41, 41, 41);
+@bc-color: #f5f5f5;
+@border: #dddddd;
+
+
+//! ----------------------------------------------------------------------
+
 
 body {
-    // display: none;
-    // background-color: crimson;
-    // transform: rotate(34deg);
+    .reg();
 }
 
-.img {
-    width: 100%;
-    height: auto;
+header {
+    // height: 700px;
+    background: url('../img/dist/bc-header.jpg') center center no-repeat;
+    background-size: cover;
 }
+
+
+.button {
+    display: inline-block;
+    color: @light-color;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    background-color: @button-color;
+    background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%);
+    padding: 10px 20px;
+
+    &:hover {
+        text-decoration: none;
+        color:@light-color;
+    }
+}
+
