@@ -47,7 +47,8 @@ header {
 
 
 .button {
-    display: inline-block;
+    width: 255px;
+    display: block;
     color: @light-color;
     box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
@@ -58,6 +59,129 @@ header {
     &:hover {
         text-decoration: none;
         color:@light-color;
+    }
+}
+
+
+
+.advan {
+    &-header {
+        margin-top: 100px;
+        margin-bottom: 130px;
+        & h3 {
+            .bold();
+            font-size: 36px;
+        }
+    }
+}
+
+.prev {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(10px);
+    width: 13px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: url('../img/dist/advan/prev.svg') center center;
+    background-size: 100%;
+}
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(10px);
+    width: 13px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: url('../img/dist/advan/next.svg') center center;
+    background-size: 100%;
+}
+
+.slick-active {
+    outline: none;
+}
+
+.slider-box {
+    margin-bottom: 130px;
+    &__img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 64px;
+    }
+    &__title { 
+        
+        margin-bottom: 30px;
+
+        & h3 {
+            font-size: 20px;
+            .bold();
+        }
+    
+    }
+
+    &__subtitle {
+        line-height: 20px;
+        font-size: 16px;
+
+        & p {
+            font-size: 15px;
+            width: 90%;
+        }
+    }
+}
+
+// LG 
+@media (min-width: 1200px) {
+.slider-box {
+    margin-right: 15px;
+}
+}
+
+// LG 
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    
+}
+
+// MD
+@media (min-width: 768px) and (max-width: 991px) {
+    .prev {
+        left: -3%;
+    }
+
+    .next {
+        right: -3%;
+    }
+
+}
+
+// Телефоны
+@media (max-width: 767px) {
+    .advan-header {
+        margin-top: 40px;
+        margin-bottom: 50px;
+
+        & h3 {
+            padding: 0px 10px;
+            word-wrap: break-word;
+        }
+    }
+    .slider-box {
+        margin-bottom: 30px;
+        &__subtitle {
+            width: 75%;
+        }
+    }
+
+    .prev {
+        left: 5%;
+    }
+
+    .next {
+        right: 5%;
     }
 }
 

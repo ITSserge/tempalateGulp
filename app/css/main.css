@@ -126,11 +126,17 @@
     width: 50%;
     margin-bottom: 50px;
   }
+  .button {
+    width: 255px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-form {
     width: 75%;
     margin-bottom: 50px;
+  }
+  .button {
+    width: 255px;
   }
 }
 @media (max-width: 767px) {
@@ -176,6 +182,9 @@
   .title h1 {
     font-size: 30px;
   }
+  .button {
+    width: 200px !important;
+  }
 }
 body {
   font-family: 'proxima_nova_reg', sans-serif;
@@ -185,7 +194,8 @@ header {
   background-size: cover;
 }
 .button {
-  display: inline-block;
+  width: 255px;
+  display: block;
   color: #fff;
   -webkit-box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
           box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
@@ -198,4 +208,99 @@ header {
 .button:hover {
   text-decoration: none;
   color: #fff;
+}
+.advan-header {
+  margin-top: 100px;
+  margin-bottom: 130px;
+}
+.advan-header h3 {
+  font-family: 'proxima_nova_bold', sans-serif;
+  font-size: 36px;
+}
+.prev {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  width: 13px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: url('../img/dist/advan/prev.svg') center center;
+  background-size: 100%;
+}
+.next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  width: 13px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: url('../img/dist/advan/next.svg') center center;
+  background-size: 100%;
+}
+.slick-active {
+  outline: none;
+}
+.slider-box {
+  margin-bottom: 130px;
+}
+.slider-box__img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 64px;
+}
+.slider-box__title {
+  margin-bottom: 30px;
+}
+.slider-box__title h3 {
+  font-size: 20px;
+  font-family: 'proxima_nova_bold', sans-serif;
+}
+.slider-box__subtitle {
+  line-height: 20px;
+  font-size: 16px;
+}
+.slider-box__subtitle p {
+  font-size: 15px;
+  width: 90%;
+}
+@media (min-width: 1200px) {
+  .slider-box {
+    margin-right: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .prev {
+    left: -3%;
+  }
+  .next {
+    right: -3%;
+  }
+}
+@media (max-width: 767px) {
+  .advan-header {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .advan-header h3 {
+    padding: 0px 10px;
+    word-wrap: break-word;
+  }
+  .slider-box {
+    margin-bottom: 30px;
+  }
+  .slider-box__subtitle {
+    width: 75%;
+  }
+  .prev {
+    left: 5%;
+  }
+  .next {
+    right: 5%;
+  }
 }
