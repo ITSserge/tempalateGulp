@@ -7,8 +7,11 @@
 // * Подкючение переменных
 @import url("variables.less");
 
-// * Подкючение переменных
+// * Подкючение Первой секции
 @import url("header.less");
+
+// * Подкючение блока с преимуществами
+@import url("advane.less");
 
 
 //! На время переташил переменные сюда, для того, чтобы появлялись подсказки 
@@ -47,7 +50,7 @@ header {
 
 
 .button {
-    width: 255px;
+    width: 100%;
     display: block;
     color: @light-color;
     box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
@@ -62,126 +65,197 @@ header {
     }
 }
 
+.button-main {
+    width: 255px;
+    display: block;
+    color: @light-color;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    background-color: @button-color;
+    background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%);
+    padding: 10px 20px;
+
+    &:hover {
+        text-decoration: none;
+        color: @light-color;
+    }
+}
 
 
-.advan {
+.link {
+    white-space: nowrap;
+    color: @icon-color;
+    letter-spacing: normal;
+    text-decoration: underline;
+
+    &:hover {
+        color: @icon-color;
+        letter-spacing: normal;
+        text-decoration: underline;
+
+    }
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.big-price {
+    font-size: 25px;
+}
+
+.card {
+    padding: 50px;
+}
+
+.price {
+    background: url('../img/dist/price/bc-price.jpg') center center repeat;
+    padding: 120px 0px;
+
     &-header {
-        margin-top: 100px;
-        margin-bottom: 130px;
-        & h3 {
+        & h2 {
             .bold();
             font-size: 36px;
         }
+
+        color: @light-color;
+        margin-bottom: 85px;
+
+        &__title {
+            margin-bottom: 45px;
+        }
+
+        &__subtitle {
+            & p {
+                font-size: 16px;
+            }
+        }
     }
-}
 
-.prev {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    transform: translateY(10px);
-    width: 13px;
-    height: 20px;
-    border: none;
-    outline: none;
-    background: url('../img/dist/advan/prev.svg') center center;
-    background-size: 100%;
-}
-.next {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(10px);
-    width: 13px;
-    height: 20px;
-    border: none;
-    outline: none;
-    background: url('../img/dist/advan/next.svg') center center;
-    background-size: 100%;
-}
-
-.slick-active {
-    outline: none;
-}
-
-.slider-box {
-    margin-bottom: 130px;
-    &__img {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 64px;
+    &-btn {
+        margin-left: 85px;
+        margin-top: 10px;
     }
-    &__title { 
-        
-        margin-bottom: 30px;
 
-        & h3 {
-            font-size: 20px;
+    &-card {
+        // max-width: 500px;
+        &__header {
+            text-align: center;
             .bold();
+            font-size: 17px;
+            margin-bottom: 33px;
         }
-    
-    }
-
-    &__subtitle {
-        line-height: 20px;
-        font-size: 16px;
-
-        & p {
-            font-size: 15px;
-            width: 90%;
+        &__img {
         }
-    }
+        &__price {
+            .bold();
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+        &__list {
+            min-height: 210px;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            &-collapse {
+                & li {
+                    position: relative;
+                    font-size: 17px;
+                    line-height: 30px;
+
+                    &::before {
+
+                        content: "";
+                        top: 0;
+                        transform: translate(-20px, 9px);
+                        position: absolute;
+                        display: inline-block;
+                        width: 11px;
+                        height: 9px;
+                        background: url(../img/dist/price/checked.png) center center;
+                    }
+                }
+                min-height: auto !important;
+            }
+            &-none {
+                & li {
+                    position: relative;
+                    font-size: 17px;
+                    line-height: 30px;
+
+                    &::before {
+
+                        content: "";
+                        top: 0;
+                        transform: translate(-20px, 9px);
+                        position: absolute;
+                        display: inline-block;
+                        width: 11px;
+                        height: 9px;
+                        background: url(../img/dist/price/checked.png) center center;
+                    }
+                }
+                & li {
+                    position: relative;
+                    font-size: 17px;
+                    line-height: 30px;
+                    &::before {
+
+                        content: "";
+                        top: 0;
+                        transform: translate(-20px, 9px);
+                        position: absolute;
+                        display: inline-block;
+                        width: 11px;
+                        height: 9px;
+                        background: url(../img/dist/price/checked.png) center center;
+                    }
+                }
+
+                
+            
+            }
+        
+        }    
+    }   
 }
 
 // LG 
 @media (min-width: 1200px) {
-.slider-box {
-    margin-right: 15px;
-}
+    .slider-box {
+        margin-right: 15px;
+    }
 }
 
 // LG 
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    
-}
-
+@media (min-width: 992px) and (max-width: 1199px) {}
+    .card {
+        // width: 400px;
+        margin-bottom: 30px;
+    }
 // MD
 @media (min-width: 768px) and (max-width: 991px) {
-    .prev {
-        left: -3%;
+    .card {
+        width: 400px;
+        margin-bottom: 30px;
     }
-
-    .next {
-        right: -3%;
+    .price-card__list {
+        min-height: auto !important;
     }
-
 }
 
 // Телефоны
 @media (max-width: 767px) {
-    .advan-header {
-        margin-top: 40px;
-        margin-bottom: 50px;
-
-        & h3 {
-            padding: 0px 10px;
-            word-wrap: break-word;
+        .card {
+            padding: 40px;
+            width: 100%;
+            margin-bottom: 30px;
         }
-    }
-    .slider-box {
-        margin-bottom: 30px;
-        &__subtitle {
-            width: 75%;
-        }
-    }
-
-    .prev {
-        left: 5%;
-    }
-
-    .next {
-        right: 5%;
-    }
 }
 
